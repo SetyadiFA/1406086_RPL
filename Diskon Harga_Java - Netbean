@@ -1,0 +1,43 @@
+package muhammad_setyadi_1406086_diskon_harga;
+
+import java.util.Scanner;
+public class Muhammad_Setyadi_1406086_Diskon_Harga_Modul2
+{
+    public static void main(String[] args)
+{
+Scanner masukan = new Scanner(System.in);
+String nmbrg;
+int hrgstuan, bnykbrg, dskn, ttlhrg, ttlbyr, kmblian;
+System.out.println("Penjualan Barang Toko Muhammad Setyadi F.A");
+System.out.print("Nama Barang   : ");
+    nmbrg = masukan.next();
+System.out.print("Harga Satuan  : Rp. ");
+    hrgstuan = masukan.nextInt();
+System.out.print("Banyak Barang : "); 
+    bnykbrg = masukan.nextInt();
+if( bnykbrg == 12 )
+{
+    System.out.println("Diskon 10% /barang");
+    dskn = (hrgstuan*bnykbrg)*10/100;
+    System.out.println("Diskon        : Rp. "+dskn);
+}
+else if( bnykbrg == 20 )
+{
+    System.out.println("Diskon 15% /barang");
+    dskn = (hrgstuan*bnykbrg)*15/100;
+    System.out.println("Diskon        : Rp. "+dskn);
+}
+else
+{
+    System.out.println("Anda Tidak Mendapatkan Diskon");
+     dskn = (hrgstuan*bnykbrg)*0/100;
+    System.out.println("Diskon        : Rp. "+dskn);
+}
+ttlhrg = (hrgstuan*bnykbrg)-dskn;
+System.out.println("Total Harga   : Rp. "+ttlhrg);
+System.out.print("Pembayaran    : Rp. ");
+    ttlbyr = masukan.nextInt();
+kmblian = ttlbyr-ttlhrg;
+System.out.println("Kembalian     : Rp. "+kmblian);
+}
+}
